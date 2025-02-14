@@ -1,6 +1,5 @@
 import React from "react";
 import EventHighlights from "./EventHighs";
-import Registration from "./registration";
 import { Typewriter } from "react-simple-typewriter";
 import ScrollAnimation from "./scrollAnimation";
 import { useEffect, useState, useRef } from "react";
@@ -44,7 +43,7 @@ const Timeline = () => {
     <ScrollAnimation >
           <div className="text-center py-12">
           <motion.h2
-  className="text-3xl font-bold text-[#4285f4] mb-10 tracking-wide text-center p-5 inline-block"
+  className="text-3xl font-bold text-[#4285f4] mb tracking-wide text-center p-5 inline-block"
   initial={{ opacity: 0, y: 20 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
@@ -60,16 +59,16 @@ const Timeline = () => {
   />
 </motion.h2>
 
-      <div className="flex max-w-5xl mx-auto px-6 overflow-x-scroll overflow-y-hidden h-[600px] scrollBar"> 
-      <div ref={timelineRef} className=" flex flex-col h-[100%]">
+      <div className="flex  mx-auto px-6 overflow-x-scroll overflow-y-hidden h-[600px] scrollBar border lg:border-0  shadow-lg"> 
+      <div ref={timelineRef} className=" flex flex-col h-[100%] ">
     
-    <div className="relative flex items-end">
+    <div className="relative flex items-end ">
       {/* Registrations */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col items-center mb-12"
+        className="flex flex-col items-center mb-12 relative top-[-30px]"
       >
         <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">📋</div>
         <div className="ml-6 text-left">
@@ -83,7 +82,7 @@ const Timeline = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col items-center mb-12 relative top-[300px]"
+        className="flex flex-col items-center mb-12 relative top-[250px]"
       >
         <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">💻</div>
         <div className="ml-6 text-left">
@@ -129,7 +128,7 @@ const Timeline = () => {
       >
         <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">🏆</div>
         <div className="ml-6 text-left">
-          <h3 className="text-2xl font-semibold text-blue-600">Initial Shortlist Announcement (Top 100)</h3>
+          <h3 className="text-2xl font-semibold text-blue-600 w-40">Initial Shortlist Announcement (Top 100)</h3>
           <p className="text-gray-700 mt-2">21st April 2025</p>
         </div>
       </motion.div>
@@ -139,11 +138,11 @@ const Timeline = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col items-center mb-12 relative top-[250px]"
+        className="flex flex-col items-center mb-12 relative top-[330px]"
       >
         <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">🔧</div>
         <div className="ml-6 text-left">
-          <h3 className="text-2xl font-semibold text-green-600">Virtual Mentorship & Prototype Submissions</h3>
+          <h3 className="text-2xl font-semibold text-green-600 w-40">Virtual Mentorship & Prototype Submissions</h3>
           <p className="text-gray-700 mt-2">22nd April - 20th May 2025</p>
         </div>
       </motion.div>
@@ -153,7 +152,7 @@ const Timeline = () => {
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col items-center mb-12"
+        className="flex flex-col items-center mb-12 relative top-[-30px]"
       >
         <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold">🛠️</div>
         <div className="ml-6 text-left">
@@ -185,7 +184,7 @@ const Timeline = () => {
       >
         <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">🥇</div>
         <div className="ml-6 text-left">
-          <h3 className="text-2xl font-semibold text-blue-600">Final Shortlist Announcement (Top 10)</h3>
+          <h3 className="text-2xl font-semibold text-blue-600 w-40">Final Shortlist Announcement (Top 10)</h3>
           <p className="text-gray-700 mt-2">16th June 2025</p>
         </div>
       </motion.div>
@@ -209,7 +208,7 @@ const Timeline = () => {
         transition={{ duration: 1 }}
         className="flex flex-col items-center mb-12"
       >
-       <div className="flex flex-col items-center relative top-[120px] ml-5">
+       <div className="flex flex-col items-center relative top-[150px] ml-5">
             <div className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl">🏆</div>
             <div className="ml-6 text-left">
               <h3 className="text-3xl font-bold text-green-600">Grand Finale</h3>
@@ -225,7 +224,7 @@ const Timeline = () => {
 };
 
 // Main Layout component
-const Layout: React.FC<LayoutProps> = ({ isMenuOpen }) => {
+const Layout: React.FC<LayoutProps> = () => {
   return (
     <>
       <div className="flex flex-col min-h-screen">
@@ -316,7 +315,7 @@ const Layout: React.FC<LayoutProps> = ({ isMenuOpen }) => {
             </div>
 
             {/* What is Solution Challenge Section */}
-            <div className="description-2 m-3 p-1 md:p-6 bg-white rounded-2xl shadow-lg border border-gray-200 text-center">
+            <div className="description-2 m-3 mt-6 p-1 md:p-6 bg-white rounded-2xl shadow-lg border border-gray-200 text-center">
             <motion.h1
       className="text-center text-3xl font-bold text-[#ea8600] p-5 inline-block"
       initial={{ opacity: 0, y: 20 }}
@@ -372,46 +371,73 @@ const Layout: React.FC<LayoutProps> = ({ isMenuOpen }) => {
 </motion.h2>
 
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6">
+            <div className="flex flex-wrap justify-center gap-6">
               {/* Education Card */}
-              <ScrollAnimation direction="left">
-                <div className="p-6 text-black rounded-2xl border-t-8 border-t-[#ea4335] shadow-lg hover:scale-105 transition">
-                  <h3 className="text-2xl font-bold">Education</h3>
-                  <p className="m-y-2 text-lg">Innovate in learning & accessibility with technology.</p>
-                </div>
-              </ScrollAnimation>
+              <motion.div
+        className="p-6 text-black rounded-2xl border-t-8 border-t-[#ea4335] shadow-lg hover:scale-105 transition w-80"
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <h3 className="text-2xl font-bold">Education</h3>
+        <p className="my-2 text-lg">Innovate in learning & accessibility with technology.</p>
+      </motion.div>
 
-              {/* Healthcare Card */}
-              <ScrollAnimation direction="left">
-                <div className="p-6 text-black border-t-8 border-t-[#4285f4] rounded-2xl shadow-lg hover:scale-105 transition">
-                  <h3 className="text-2xl font-bold">Healthcare</h3>
-                  <p className="m-y-2 text-lg">Improve patient care and health solutions.</p>
-                </div>
-              </ScrollAnimation>
+      {/* Healthcare Card */}
+      <motion.div
+        className="p-6 text-black border-t-8 border-t-[#4285f4] rounded-2xl shadow-lg hover:scale-105 transition w-80"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <h3 className="text-2xl font-bold">Healthcare</h3>
+        <p className="my-2 text-lg">Improve patient care and health solutions.</p>
+      </motion.div>
 
-              {/* Sustainability Card */}
-              <ScrollAnimation direction="right">
-                <div className="p-6 text-gray-900 rounded-2xl border-t-8 border-t-[#ea8600] shadow-lg hover:scale-105 transition">
-                  <h3 className="text-2xl font-bold">Sustainability</h3>
-                  <p className="m-y-2 text-lg">Develop solutions for a greener future.</p>
-                </div>
-              </ScrollAnimation>
+      {/* Sustainability Card */}
+      <motion.div
+        className="p-6 text-gray-900 rounded-2xl border-t-8 border-t-[#ea8600] shadow-lg hover:scale-105 transition w-80"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <h3 className="text-2xl font-bold">Sustainability</h3>
+        <p className="my-2 text-lg">Develop solutions for a greener future.</p>
+      </motion.div>
 
-              {/* Social Impact Card */}
-              <ScrollAnimation direction="right">
-                <div className="p-6 text-black border-t-8 border-t-[#34a853] rounded-2xl shadow-lg hover:scale-105 transition">
-                  <h3 className="text-2xl font-bold">Social Impact</h3>
-                  <p className="m-y-2 text-lg">Use tech to solve global and local challenges.</p>
-                </div>
-              </ScrollAnimation>
-            </div>
+      {/* Social Impact Card */}
+      <motion.div
+        className="p-6 text-black border-t-8 border-t-[#34a853] rounded-2xl shadow-lg hover:scale-105 transition w-80"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <h3 className="text-2xl font-bold">Social Impact</h3>
+        <p className="my-2 text-lg">Use tech to solve global and local challenges.</p>
+      </motion.div>
+              </div>
           </div>
 
           {/* Timeline Component */}
           <Timeline />
           {/* Other Components */}
           <EventHighlights />
-          <Registration />
+          <section className="py-16 text-center bg-gradient-to-br from-[#4285f4] to-white  rounded-3xl px-5">
+      <h2 className="text-4xl font-extrabold mb-4 text-white">Join the Solution Challenge!</h2>
+      <p className="text-lg mb-6 max-w-2xl mx-auto text-gray-800 font-semibold">
+        Be part of an incredible journey! Register now and bring your ideas to life using Google Developer Technologies.
+      </p>
+
+      {/* Registration Button */}
+      <a
+        href="https://your-registration-link.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-white text-[#ea4339] font-semibold px-6 py-3 rounded-full text-lg shadow-lg hover:bg-gray-200 transition"
+      >
+        Register Now 🚀
+      </a>
+    </section>
         </main>
 
         {/* Footer */}

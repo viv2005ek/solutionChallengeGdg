@@ -17,7 +17,7 @@ const highlights: Highlight[] = [
 const EventHighlights: React.FC = () => {
   return (
     <section className="py-10 text-center bg-gray-100">
-      <h2 className="text-4xl font-extrabold text-gray-800 mb-10">Event Highlights</h2>
+      <h2 className="text-4xl font-extrabold text-gray-800 mb-10">Last Year Winners</h2>
 
       {/* Card Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6">
